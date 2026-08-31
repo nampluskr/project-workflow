@@ -88,7 +88,7 @@
 | 9 | 보고 | 8절 |
 
 `docs/history/`는 만들지 않는다. **첫 마감 때 생긴다.**
-`src/`·`scripts/`·`tests/`·`docs/analysis/`도 만들지 않는다.
+`src/`·`scripts/`·`tests/`도 만들지 않는다.
 
 ---
 

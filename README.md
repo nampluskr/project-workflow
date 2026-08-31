@@ -76,8 +76,7 @@ d:/tools/project-workflow/docs/INIT.md 를 읽고 이 프로젝트를 초기화�
 ├── .claude/              rules · hooks · agents
 └── docs/
     ├── current/          현재 버전 6종
-    ├── history/v0.1/     지난 버전 6종. 불변
-    └── analysis/         조사·실측
+    └── history/v0.1/     지난 버전 6종. 불변
 ```
 
 **두 층이다.** 루트는 프로젝트 전체에 걸리는 것, `docs/current/`는 이번 버전 것.
