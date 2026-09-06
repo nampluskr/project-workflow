@@ -44,6 +44,9 @@ cd my-project
 claude
 ```
 
+프로젝트 폴더명은 단어를 `-`로 연결한 `project-name` 형식을 사용한다. GitHub 저장소를
+만들거나 연결할 때도 폴더명과 정확히 같은 이름을 사용하며, 단어 연결에 `_`를 쓰지 않는다.
+
 ```
 d:/tools/project-workflow/docs/INIT.md 를 읽고 이 프로젝트를 초기화해줘.
 ```
