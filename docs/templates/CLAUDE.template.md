@@ -1,8 +1,11 @@
-project-workflow v1.0 기준으로 초기화됨 (YYYY-MM-DD)
+project-workflow v0.2 기준으로 초기화됨 (YYYY-MM-DD)
 
 # 이 프로젝트에서 지킬 것
 
-- 현재 버전 문서는 `docs/current/`에 있다. 5종은 사람이 쓴다. **고치지 않는다**
+- `docs/current/INTENT.md`는 SSOT다. 사람의 요청으로만 고친다. 다른 문서는 여기 어긋나면 안 된다
+- 현재 버전 문서는 `docs/current/`에 있다. INTENT와 버전 문서는 사람이 쓴다. **고치지 않는다**
+- 문서가 `INTENT.md`에 어긋나면 혼자 맞추지 말고 멈추고 보고한다
+- major·minor 버전 번호는 사람이 정한다. 스스로 올리지 않는다
 - `backlog.json`은 CLI로만 바꾼다. 직접 편집하지 않는다
 - 진행 중에 task를 추가하지 않는다. 계획 밖 작업은 `docs/current/PROGRESS.md`에 적는다
 - task를 닫을 때마다 `PROGRESS.md`에 무엇을·결과·검증을 남긴다

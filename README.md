@@ -40,7 +40,7 @@ git clone <this-repo> d:/tools/project-workflow
 ```
 mkdir my-project
 cd my-project
-# README.md 와 5종 문서를 여기 넣는다
+# INTENT.md · 버전 문서 · README.md 를 여기 넣는다
 claude
 ```
 
@@ -74,12 +74,13 @@ d:/tools/project-workflow/docs/INIT.md 를 읽고 이 프로젝트를 초기화�
 
 ```
 <project>/
-├── README.md             이 프로젝트가 무엇인가
+├── README.md             밖에 소개 — 개요·설치·사용법
 ├── CLAUDE.md             지켜야 할 제약. 매 세션 로드
 ├── .claude/              rules · hooks · agents
 └── docs/
-    ├── current/          현재 버전 6종
-    └── history/v0.1/     지난 버전 6종. 불변
+    ├── current/          INTENT.md(SSOT) + 현재 버전 문서
+    ├── refs/             기획 때 본 참고 자료
+    └── history/v0.1/     지난 버전 문서. INTENT는 없다. 불변
 ```
 
 **두 층이다.** 루트는 프로젝트 전체에 걸리는 것, `docs/current/`는 이번 버전 것.
@@ -87,19 +88,27 @@ d:/tools/project-workflow/docs/INIT.md 를 읽고 이 프로젝트를 초기화�
 
 ---
 
-## 6종 문서
+## 문서
 
-| 문서 | 담는 것 | 누가 |
-| --- | --- | --- |
-| `BRIEF.md` | 배경, **이번 버전에서 풀고 싶은 문제** | 사람 |
-| `DECISIONS.md` | 설계 결정과 근거, **배제한 대안** | 사람 |
-| `SPEC.md` | 요구사항 · 제약 · **미구현 대상** | 사람 |
-| `PLAN.md` | Phase 배열과 완료 조건 | 사람 |
-| `backlog.json` | task 분해. **계획한 것**의 SSOT | 사람 |
-| `PROGRESS.md` | 진행 기록. **실제로 한 것** | 에이전트 |
+| 문서 | 담는 것 | 누가 | 있을 때 |
+| --- | --- | --- | --- |
+| `INTENT.md` | **이 프로젝트가 무엇을 왜 하는가. SSOT** | 사람 | `v0.1`부터 계속 |
+| `BRIEF.md` | 배경, **이번 버전에서 풀고 싶은 문제** | 사람 | 모든 버전 |
+| `DECISIONS.md` | 설계 결정과 근거, **배제한 대안** | 사람 | 모든 버전 |
+| `SPEC.md` | 요구사항 · 제약 · **미구현 대상** | 사람 | 선택 |
+| `PLAN.md` | Phase 배열과 완료 조건 | 사람 | 모든 버전 |
+| `backlog.json` | task 분해. **계획한 것**의 SSOT | 사람 | 선택 |
+| `PROGRESS.md` | 진행 기록. **실제로 한 것** | 에이전트 | 구현 시작 후 |
 
-**버전마다 여섯 개를 새로 쓴다.** 누적하지 않는다.
+**버전 문서는 버전마다 새로 쓴다.** 누적하지 않는다.
 `docs/history/v0.1/`을 열면 그 폴더만으로 그 버전이 완결된다.
+
+**`INTENT.md`는 예외다.** SSOT이므로 `v0.1`에 한 번 만들고 계속 이어진다. 버전마다
+새로 쓰지 않고, history로 복사되지 않으며, 버전 번호와 무관하다. 필요하면 사람의
+요청으로 언제든 고친다. (`docs/DOC-SCHEMA.md` 2절)
+
+**`SPEC.md`·`backlog.json`은 선택이다.** 요구가 단순하면 생략하고 `BRIEF`→`PLAN`으로
+갈 수 있다. major·minor 버전 번호는 **사람이 정한다.** 자동 규칙은 없다.
 
 ---
 

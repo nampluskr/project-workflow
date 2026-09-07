@@ -3,8 +3,9 @@
 새 프로젝트를 시작할 때 여기서 가져다 쓴다. **형식이 정해져 있어 매번 다시 쓰게
 되는 것**만 둔다.
 
-5종 문서(`BRIEF`·`DECISIONS`·`SPEC`·`PLAN`·`backlog.json`)의 빈 양식은 두지 않는다.
-그건 사람이 쓰는 것이고, 형식은 `../DOC-SCHEMA.md`가 정의한다.
+`INTENT.md`와 버전 문서(`BRIEF`·`DECISIONS`·`SPEC`·`PLAN`·`backlog.json`)의 빈 양식은
+두지 않는다. 그건 **사람이 쓰는 것**이고, 형식은 `../DOC-SCHEMA.md`가 정의한다
+(INTENT는 2절, 나머지는 3절 이하).
 
 ---
 
@@ -12,7 +13,7 @@
 
 | 파일 | 어디로 | 손볼 곳 |
 | --- | --- | --- |
-| `README.template.md` | `<project>/README.md` | 블럭 1을 사람이 채운다 |
+| `README.template.md` | `<project>/README.md` | 개요를 사람이 채운다 (설치·사용법은 마감 때) |
 | `CLAUDE.template.md` | `<project>/CLAUDE.md` | 첫 줄 날짜, 프로젝트 고유 제약 |
 | `AGENTS.template.md` | `<project>/AGENTS.md` | 프로젝트 이름 |
 | `claude/settings.template.json` | `<project>/.claude/settings.json` | 경로 확인 |

@@ -7,14 +7,17 @@ Claude Code는 `CLAUDE.md`를 읽는다. 이 파일은 그 외 에이전트를 �
 
 | 위치 | 무엇 | 수명 |
 | --- | --- | --- |
-| `docs/current/` | 현재 버전 6종 | 버전 |
-| `docs/history/vX.Y/` | 지난 버전 6종. **불변** | 영구 |
+| `docs/current/INTENT.md` | 이 프로젝트가 무엇을 왜 하는가. **SSOT** | 프로젝트 전체 |
+| `docs/current/` | 현재 버전 문서 (INTENT 제외) | 버전 |
+| `docs/history/vX.Y/` | 지난 버전 문서. INTENT는 없다. **불변** | 영구 |
 | `README.md` · `CLAUDE.md` · `.claude/` | 프로젝트 전체 | 영구 |
 | `src/` · `scripts/` · `tests/` | 코드 | — |
 
 ## 하지 않을 것
 
-- `docs/current/`의 5종(`BRIEF`·`DECISIONS`·`SPEC`·`PLAN`·`backlog.json`)을 고치지 않는다. **사람이 쓴다**
+- `docs/current/`의 문서(`INTENT`·`BRIEF`·`DECISIONS`·`SPEC`·`PLAN`·`backlog.json`)를 고치지 않는다. **사람이 쓴다**
+- `INTENT.md`(SSOT)는 사람의 요청으로만 고친다. 스스로 바꾸지 않는다
+- 문서가 `INTENT.md`에 어긋나면 혼자 맞추지 말고 멈추고 보고한다
 - `docs/history/` 아래를 수정·삭제하지 않는다. 읽기만 한다
 - `backlog.json`을 직접 편집하지 않는다. CLI로만 바꾼다
 - 진행 중에 task를 추가하지 않는다
